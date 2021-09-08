@@ -1,4 +1,4 @@
-TEST test 
+This is a test.
 
 # Flask on Heroku
 
