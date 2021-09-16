@@ -34,25 +34,25 @@ app = Flask(__name__)
   #p.yaxis.axis_label = 'Price in USD'
   #return p
 
-#@app.route('/', methods=['GET','POST'])
-#def index():
-  #return render_template('index.html')
+@app.route('/', methods=['GET','POST'])
+def index():
+  return render_template('index.html')
 
-#@app.route('/about')
-#def about():
-  #return render_template('about.html')
+@app.route('/about')
+def about():
+  return render_template('about.html')
 
-#@app.route('/graph', methods=['POST'])
-#def graph():
-  #ticker = request.form['tickerInput'].upper()
-  #price = request.form['priceInput']
+@app.route('/graph', methods=['POST'])
+def graph():
+  ticker = request.form['tickerInput'].upper()
+  price = request.form['priceInput']
 
-  #response = getURL(ticker)
-  #df = processing(response, price)
+  response = getURL(ticker)
+  df = processing(response, price)
 
-  #p = make_graph(df)
+  p = make_graph(df)
 
-  #return render_template('index.html')
+  return render_template('index.html')
 
 if __name__ == '__main__':
   app.run(port=33507)
