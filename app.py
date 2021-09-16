@@ -2,17 +2,17 @@ from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
-#import requests
-#import json
-#import pandas as pd
-#import datetime
-#from bokeh.plotting import figure, output_file, show
-#from bokeh.models import ColumnDataSource
+import requests
+import json
+import pandas as pd
+import datetime
+from bokeh.plotting import figure, output_file, show
+from bokeh.models import ColumnDataSource
 
-#def getURL(ticker, key = 'XXX'):
-  #url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={}&apikey={}'.format(ticker, key)
-  #response = requests.get(url)
-  #return response
+def getURL(ticker, key = 'XXX'):
+  url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={}&apikey={}'.format(ticker, key)
+  response = requests.get(url)
+  return response
 
 #def processing(response, price):
   #df = pd.read_json(response)
