@@ -34,7 +34,7 @@ def make_graph(df):
   p.yaxis.axis_label = 'Price in USD'
   return p
 
-@app.route('/index', methods=['POST'])
+@app.route('/', methods=['GET','POST'])
 def index():
   return render_template('index.html')
 
