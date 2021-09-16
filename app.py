@@ -42,7 +42,7 @@ def index():
 def about():
   return render_template('about.html')
 
-@app.rout('/graph', methods=['POST'])
+@app.route('/graph', methods=['POST'])
 def graph():
   ticker = request.form['tickerInput'].upper()
   price = request.form['priceInput']
